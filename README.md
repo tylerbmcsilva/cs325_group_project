@@ -21,3 +21,14 @@ Your group will research at least three different algorithms for solving the TSP
 - The next n lines should contain the city identifiers in the order they are visited by your tour.
   - Each city must be listed exactly once in this list.
   - This is the certificate for your solution and your solutions will be checked. If they are not valid you will not receive credit for them.
+
+### Final Checklist:
+- [ ] Does your program correctly compute tour lengths for simple cases?
+- [ ] Does your program read input files and options from the command line?
+- [ ] Does your program meet the output specifications?
+- [ ] Did you check that you produce solutions that verify correctly?
+- [ ] Did you find solutions to the example instances?
+- [ ] Did you find solutions to the competition instances? Post your results to the competition discussion board to be eligible for extra-credit points.
+- [ ] Does your code compile/run without issue according to your documentation?
+- [ ] Have you submitted your report to Canvas? In the comment section post the onid username of the person who submitted to TEACH.
+- [ ] Have you submitted your report, your solutions to the test cases, your source code and README file to TEACH?
