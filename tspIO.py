@@ -5,7 +5,7 @@ import math
 #reads input file where each line is: vertex# x-coord y-coord
 def buildAdjacencyMatrix(inputFileName):
     with open(inputFileName) as f:  
-        nodes = [tuple(map(int, i.split(' '))) for i in f]
+        nodes = [tuple(map(int, i.split())) for i in f];
     
     print "done reading from file";
     
