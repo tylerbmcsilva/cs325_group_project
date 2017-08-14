@@ -24,8 +24,10 @@ Matrix = tspIO.buildAdjacencyMatrix(inputFileName);
 #find first-guess solution using Nearest-Neighbor 
 appxTour, minLength = tspNearestNeighbor.approximate(Matrix, outputFileName);
 
+lastSolutionTime = timeit.default_timer() - start_time;
+print "NN approximation completed and printed to file at: " + str(round(lastSolutionTime, 2)) + " seconds.";
 #print first guess to solution file
-tspIO.printTour(appxTour, minLength, outputFileName);
+#tspIO.printTour(appxTour, minLength, outputFileName);
 
 #utility function used by 2-OPT to swap 2 edges and ensure tour remains valid
 def optSwap(i, k, bestTour):
@@ -66,8 +68,9 @@ while improvement < 20:         #stop if 20 iterations pass with no improvement
 					#if time limit hasn't elapsed, print latest solution
 					if timeit.default_timer() - start_time < timeLimit:
 					    tspIO.printTour(appxTour, minLength, outputFileName);
+					    lastSolutionTime = timeit.default_timer() - start_time;
 					else:
-					    sys.exit("Time limit reached. See " + outputFileName + " for best solution found");
+					    sys.exit("Time limit reached. See " + outputFileName + " for best solution found at " + str(round(lastSolutionTime, 2)) + " seconds.");
 	improvement += 1; 
 	
 elapsed = timeit.default_timer() - start_time
