@@ -46,5 +46,6 @@ def approximate(Matrix, outputFileName):
         if tourDist < minDistPath:
             minDistPath = tourDist;
             bestTour = tour;
+            tspIO.printTour(bestTour, minDistPath, outputFileName);
         
     return bestTour, minDistPath;
